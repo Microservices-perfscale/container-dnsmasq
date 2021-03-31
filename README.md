@@ -1,5 +1,24 @@
-# container-dnsmasq
+# Containerized DNS server using dnsmasq
 
-podman build -t dnsmasqperf .
+## Build Image from Containerfile
+```
+podman build -t container-dnsmasq .
+```
 
-podman run -it -p 5353:53 -v $( pwd )/hosts_dir/:/hosts_dir/:Z --name dnsserver dnsmasqperf
+## Run container
+```
+podman run -it -p 53:53/tcp -p 53:53/udp -v $( pwd )/hosts_dir/:/hosts_dir/:z container-dnsmasq
+```
+
+## Concept
+Host files are contained in hosts_dir and all records are read by dnsmasq by using --hostsdir option as seen in Containerfile.
+```
+--hostsdir=<path>
+Read all the hosts files contained  in  the  directory.  New  or changed  files  are  read automatically. 
+```
+
+## Usage
+```
+$ dig  +short my-cool-host.example.com @<server-name>
+10.x.x.x
+```
