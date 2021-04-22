@@ -10,6 +10,6 @@ RUN INSTALL_PKGS="dnsmasq" \
 
 EXPOSE 53/tcp 53/udp
 
-ENTRYPOINT [ "/usr/sbin/dnsmasq", "-k", "--no-resolv" ]
+ENTRYPOINT [ "/usr/sbin/dnsmasq", "-d", "--no-resolv" ]
 
 CMD [ "--hostsdir=/hosts_dir", "--cache-size=0", "--no-hosts" ]
