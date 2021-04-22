@@ -12,4 +12,6 @@ EXPOSE 53/tcp 53/udp
 
 COPY reload.sh /root/reload.sh
 
+RUN chmod +x /root/reload.sh
+
 ENTRYPOINT [ "/root/reload.sh" ]
