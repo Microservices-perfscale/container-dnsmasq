@@ -10,6 +10,6 @@ RUN INSTALL_PKGS="dnsmasq" \
 
 EXPOSE 53/tcp 53/udp
 
-ENTRYPOINT [ "/usr/sbin/dnsmasq", "-d", "--no-resolv" ]
+COPY reload.sh /root/reload.sh
 
-CMD [ "--hostsdir=/hosts_dir", "--cache-size=0", "--no-hosts" ]
+ENTRYPOINT [ "/root/reload.sh" ]
