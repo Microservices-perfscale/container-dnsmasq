@@ -19,6 +19,6 @@ Read all the hosts files contained  in  the  directory.  New  or changed  files 
 
 ## Usage
 ```
-$ dig  +short my-cool-host.example.com @<server-name>
+$ dig  +short my-cool-host.example.com @<server-name/IP>
 10.x.x.x
 ```
