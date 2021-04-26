@@ -22,3 +22,8 @@ Read all the hosts files contained  in  the  directory.  New  or changed  files 
 $ dig  +short my-cool-host.example.com @<server-name/IP>
 10.x.x.x
 ```
+
+## DNS Manager API
+```
+Refer to dns manager API at github.com/Microservices-perfscale/tiny-ddns-manager
+```
