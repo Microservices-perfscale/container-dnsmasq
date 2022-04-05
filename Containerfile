@@ -14,4 +14,4 @@ COPY reload.sh /root/reload.sh
 
 RUN chmod +x /root/reload.sh
 
-ENTRYPOINT [ "/root/reload.sh" ]
+CMD [ "/root/reload.sh" ]
