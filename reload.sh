@@ -1,5 +1,5 @@
 #!/bin/bash
-/usr/sbin/dnsmasq --keep-in-foreground --hostsdir=/hosts_dir &
+/usr/sbin/dnsmasq --keep-in-foreground --hostsdir=/hosts_dir --auth-zone=perf.redhat.com &
 dns_pid=$!
 while true; do
     sleep 600
