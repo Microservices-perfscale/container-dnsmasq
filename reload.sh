@@ -1,5 +1,5 @@
 #!/bin/bash
-/usr/sbin/dnsmasq -d --hostsdir=/hosts_dir 1>&- 2>&-  &
+/usr/sbin/dnsmasq -d --hostsdir=/hosts_dir &
 dns_pid=$!
 while true
 do
