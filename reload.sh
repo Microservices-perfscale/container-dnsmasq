@@ -1,5 +1,5 @@
 #!/bin/bash
-/usr/sbin/dnsmasq -d --hostsdir=/hosts_dir &
+/usr/sbin/dnsmasq --keep-in-foreground --hostsdir=/hosts_dir &
 dns_pid=$!
 while true; do
     sleep 600
