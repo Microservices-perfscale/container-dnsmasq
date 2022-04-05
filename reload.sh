@@ -1,5 +1,5 @@
 #!/bin/bash
-/usr/sbin/dnsmasq --keep-in-foreground --hostsdir=/hosts_dir ${DNSMASQ_OPTS} &
+/usr/sbin/dnsmasq --no-daemon --hostsdir=/hosts_dir ${DNSMASQ_OPTS} &
 dns_pid=$!
 while true; do
     sleep 600
